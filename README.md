@@ -11,3 +11,7 @@ npm ci
 cd ../4_nuxt-app
 npm ci
 ```
+
+## Notes
+- 1_react-app is created with `npx create-react-app 1_react-app` command of [create-react-app](https://github.com/facebook/create-react-app)
+- 2_vue-app is created with `npm create vue@3` command of [create-vue](https://github.com/vuejs/create-vue)
