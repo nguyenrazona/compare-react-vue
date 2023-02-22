@@ -11,6 +11,19 @@ npm ci
 cd ../4_nuxt-app
 npm ci
 ```
+- Start React app:
+```
+cd 1_react-app
+npm start
+# URL: localhost:3000 (browser will be automatically opened)
+```
+
+- Start Vue app:
+```
+cd 2_vue-app
+npm run dev
+# URL: localhost:5173
+```
 
 ## Notes
 - 1_react-app is created with `npx create-react-app 1_react-app` command of [create-react-app](https://github.com/facebook/create-react-app)
