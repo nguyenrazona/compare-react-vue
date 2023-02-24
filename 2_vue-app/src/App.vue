@@ -1,83 +1,74 @@
 <script setup lang="ts">
-import HelloWorld from "./components/HelloWorld.vue";
+import { onMounted } from "vue";
+import List1 from "./components/List1.vue";
+import List2 from "./components/List2.vue";
+import List3 from "./components/List3.vue";
+
+const List = List1;
+// const List = List2;
+// const List = List3;
+
+onMounted(() => {
+  // Log performance
+  setTimeout(function() {
+    const loadTime = window.performance.timing.domContentLoadedEventEnd- window.performance.timing.navigationStart;
+    console.log(`load time: ${loadTime} ms`)
+  }, 1000);
+});
 </script>
 
 <template>
-  <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="@/assets/logo.svg"
-      width="125"
-      height="125"
-    />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it2!" />
-    </div>
-  </header>
+  <div class="wrapper">
+    <List :members="30" />
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+<style>
+#app {
+  margin: 0;
+  padding: 0;
+  background-color: white;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
 }
 
-nav {
+.wrapList {
+  padding-left: 100px;
+}
+
+body {
+  background-color: white;
+}
+
+img {
   width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
+p {
+  color: black;
+  font: Arial;
+  line-height: 24px;
+  font-size: 15px;
+  font-weight: normal;
+  text-align: justify;
+  margin: 0;
+  padding: 0;
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+li {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 0;
+  padding: 0;
 }
 </style>
