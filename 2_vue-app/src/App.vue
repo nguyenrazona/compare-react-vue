@@ -11,7 +11,7 @@ const List = List1;
 onMounted(() => {
   // Log performance
   setTimeout(function() {
-    const loadTime = window.performance.timing.domContentLoadedEventEnd- window.performance.timing.navigationStart;
+    const loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
     console.log(`load time: ${loadTime} ms`)
   }, 1000);
 });

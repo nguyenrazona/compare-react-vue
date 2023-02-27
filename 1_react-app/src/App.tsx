@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
     // Log performance
     setTimeout(function() {
-      const loadTime = window.performance.timing.domContentLoadedEventEnd- window.performance.timing.navigationStart;
+      const loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
       console.log(`load time: ${loadTime} ms`)
     }, 1000);
   }, []);
