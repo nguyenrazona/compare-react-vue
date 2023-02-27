@@ -28,3 +28,9 @@ defineProps<{
     </li>
   </ul>
 </template>
+
+<style scoped>
+.wrapList {
+  padding-left: 100px;
+}
+</style>

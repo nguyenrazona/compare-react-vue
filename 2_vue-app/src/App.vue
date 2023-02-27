@@ -23,52 +23,9 @@ onMounted(() => {
   </div>
 </template>
 
-<style>
-#app {
-  margin: 0;
-  padding: 0;
-  background-color: white;
-}
-
+<style scoped>
 .wrapper {
   width: 960px;
   margin: 0 auto;
-}
-
-.wrapList {
-  padding-left: 100px;
-}
-
-body {
-  background-color: white;
-}
-
-img {
-  width: 100%;
-}
-
-p {
-  color: black;
-  font: Arial;
-  line-height: 24px;
-  font-size: 15px;
-  font-weight: normal;
-  text-align: justify;
-  margin: 0;
-  padding: 0;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-li {
-  display: flex;
-  flex-direction: column;
-  width: 400px;
-  margin: 0;
-  padding: 0;
 }
 </style>
